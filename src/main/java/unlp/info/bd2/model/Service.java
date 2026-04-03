@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.persistence.*;
 
-
 @Entity
 @Table(name = "service", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"name"})

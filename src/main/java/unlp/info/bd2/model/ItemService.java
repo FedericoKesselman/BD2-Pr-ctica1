@@ -1,5 +1,6 @@
 package unlp.info.bd2.model;
 
+import jakarta.persistence.*;
 
 public class ItemService {
 
@@ -7,8 +8,12 @@ public class ItemService {
 
     private int quantity;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "purchase_id", nullable = false)
     private Purchase purchase;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "service_id", nullable = false)
     private Service service;
 
     public Long getId() {

@@ -14,19 +14,23 @@ public class Purchase {
 
     private Date date;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "route_id", nullable = false)
     private Route route;
 
-     @OneToOne(
-            mappedBy = "purchase",
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-            orphanRemoval = true)
+    @OneToOne(
+        mappedBy = "purchase",
+        cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+        fetch = FetchType.LAZY,
+        orphanRemoval = true)
     private Review review;
 
+    @OneToMany(mappedBy = "purchase", fetch = FetchType.LAZY)
     private List<ItemService> itemServiceList;
-
-
 
     public Long getId() {
         return id;

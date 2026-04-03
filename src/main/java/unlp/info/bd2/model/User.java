@@ -3,6 +3,7 @@ package unlp.info.bd2.model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import jakarta.persistence.*;
 
 public class User {
 
@@ -22,8 +23,8 @@ public class User {
 
     private boolean active;
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Purchase> purchaseList;
-
 
     public Long getId() {
         return id;

@@ -2,6 +2,7 @@ package unlp.info.bd2.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import jakarta.persistence.*;
 
 public class Route {
 
@@ -15,10 +16,23 @@ public class Route {
 
     private int maxNumberUsers;
 
+    @OneToMany(mappedBy = "route", fetch = FetchType.LAZY)
     private List<Stop> stops;
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "route_driver",
+            joinColumns = @JoinColumn(name = "route_id"),
+            inverseJoinColumns = @JoinColumn(name = "driver_id")
+    )
     private List<DriverUser> driverList;
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "route_tourguide",
+            joinColumns = @JoinColumn(name = "route_id"),
+            inverseJoinColumns = @JoinColumn(name = "tourguide_id")
+    )
     private List<TourGuideUser> tourGuideList;
 
     public Long getId() {
