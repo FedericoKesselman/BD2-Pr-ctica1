@@ -17,7 +17,7 @@ public class Review {
     @JoinColumn(name = "purchase_id", unique = true, nullable = true)
     private Purchase purchase;
 
-    protected Revier() {}
+    protected Review() {}
 
     public Long getId() {
         return id;

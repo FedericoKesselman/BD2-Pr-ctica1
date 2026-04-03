@@ -21,7 +21,7 @@ public class Route {
 
     @OneToMany(
         mappedBy = "route", 
-        cascate = CascadeType.ALL,
+        cascade = CascadeType.ALL,
         orphanRemoval = true,
         fetch = FetchType.LAZY
     )
@@ -107,4 +107,13 @@ public class Route {
         this.tourGuideList = tourGuideList;
     }
 
+    public void addDriver(DriverUser driver) {
+        this.driverList.add(driver);
+        driver.getRoutes().add(this);
+    }
+
+    public void addTourGuide(TourGuideUser guide) {
+        this.tourGuideList.add(guide);
+        guide.getRoutes().add(this);
+    }
 }

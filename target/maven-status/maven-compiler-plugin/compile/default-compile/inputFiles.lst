@@ -1,0 +1,17 @@
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/utils/DBInitializer.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/model/Purchase.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/model/Review.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/model/Supplier.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/config/AppConfig.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/services/ToursService.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/config/HibernateConfiguration.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/model/Stop.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/model/Route.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/utils/ToursException.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/model/TourGuideUser.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/model/DriverUser.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/model/Service.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/TrabajoPractico2026Application.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/model/User.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/config/DBInitializerConfig.java
+/Users/fkesselman/Desktop/Facultad/BD2/tp-bbdd2-tours/src/main/java/unlp/info/bd2/model/ItemService.java

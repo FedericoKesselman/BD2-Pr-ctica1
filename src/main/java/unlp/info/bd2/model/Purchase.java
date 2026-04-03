@@ -36,7 +36,7 @@ public class Purchase {
         mappedBy = "purchase", 
         cascade = {CascadeType.PERSIST, CascadeType.MERGE},
         orphanRemoval = true,
-        fetch = FetchType.LAZY,
+        fetch = FetchType.LAZY
     )
     private List<ItemService> itemServiceList;
 

@@ -4,13 +4,16 @@ package unlp.info.bd2.model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import jakarta.persistence.*;
 
+@Entity
+@DiscriminatorValue("GUIDE")
 public class TourGuideUser extends User {
 
+    @Column(nullable = true)
     private String education;
 
     private List<Route> routes;
-
 
     public String getEducation() {
         return education;

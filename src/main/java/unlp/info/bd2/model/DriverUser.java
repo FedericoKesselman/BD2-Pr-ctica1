@@ -1,10 +1,13 @@
 package unlp.info.bd2.model;
 
-
 import java.util.List;
+import jakarta.persistence.*;
 
+@Entity
+@DiscriminatorValue("DRIVER")
 public class DriverUser extends User {
 
+    @Column(nullable = true)
     private String expedient;
 
     private List<Route> routes;
