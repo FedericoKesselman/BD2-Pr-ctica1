@@ -2,6 +2,7 @@ package unlp.info.bd2.model;
 
 import java.util.Date;
 import java.util.List;
+import jakarta.persistence.*;
 
 public class Purchase {
 
@@ -17,6 +18,10 @@ public class Purchase {
 
     private Route route;
 
+     @OneToOne(
+            mappedBy = "purchase",
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+            orphanRemoval = true)
     private Review review;
 
     private List<ItemService> itemServiceList;

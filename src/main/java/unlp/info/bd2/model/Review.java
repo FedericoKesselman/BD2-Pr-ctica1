@@ -1,5 +1,6 @@
 package unlp.info.bd2.model;
 
+import jakarta.persistence.*;
 
 public class Review {
 
@@ -9,8 +10,9 @@ public class Review {
 
     private String comment;
 
+    @OneToOne(optional = true, fetch = FetchType.LAZY)
+    @JoinColumn(name = "purchase_id", unique = true, nullable = true)
     private Purchase purchase;
-
 
     public Long getId() {
         return id;
