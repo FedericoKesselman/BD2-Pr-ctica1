@@ -4,8 +4,11 @@ import java.util.Date;
 import java.util.List;
 import jakarta.persistence.*;
 
+@Entity
 public class Purchase {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
 
     private String code;
@@ -24,12 +27,17 @@ public class Purchase {
 
     @OneToOne(
         mappedBy = "purchase",
-        cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+        cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE},
         fetch = FetchType.LAZY,
         orphanRemoval = true)
     private Review review;
 
-    @OneToMany(mappedBy = "purchase", fetch = FetchType.LAZY)
+    @OneToMany(
+        mappedBy = "purchase", 
+        cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+        orphanRemoval = true,
+        fetch = FetchType.LAZY,
+    )
     private List<ItemService> itemServiceList;
 
     public Long getId() {

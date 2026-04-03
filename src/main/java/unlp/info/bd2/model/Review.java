@@ -2,8 +2,11 @@ package unlp.info.bd2.model;
 
 import jakarta.persistence.*;
 
+@Entity
 public class Review {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     private int rating;
@@ -13,6 +16,8 @@ public class Review {
     @OneToOne(optional = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "purchase_id", unique = true, nullable = true)
     private Purchase purchase;
+
+    protected Revier() {}
 
     public Long getId() {
         return id;

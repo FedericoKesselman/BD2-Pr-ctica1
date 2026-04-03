@@ -2,8 +2,11 @@ package unlp.info.bd2.model;
 
 import jakarta.persistence.*;
 
+@Entity
 public class Stop {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     private String name;
@@ -13,6 +16,8 @@ public class Stop {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "route_id", nullable = false)
     private Route route;
+
+    protected Stop() {}
 
     public Long getId() {
         return id;

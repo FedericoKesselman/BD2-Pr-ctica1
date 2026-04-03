@@ -2,8 +2,11 @@ package unlp.info.bd2.model;
 
 import jakarta.persistence.*;
 
+@Entity
 public class ItemService {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
 
     private int quantity;

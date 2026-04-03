@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.persistence.*;
 
+@Entity
 public class Route {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     private String name;
@@ -16,7 +19,12 @@ public class Route {
 
     private int maxNumberUsers;
 
-    @OneToMany(mappedBy = "route", fetch = FetchType.LAZY)
+    @OneToMany(
+        mappedBy = "route", 
+        cascate = CascadeType.ALL,
+        orphanRemoval = true,
+        fetch = FetchType.LAZY
+    )
     private List<Stop> stops;
 
     @ManyToMany(fetch = FetchType.LAZY)
